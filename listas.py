@@ -1,0 +1,26 @@
+frutas=["manzana","plátano","naranja", "pera"]
+print("La lista es:",frutas)
+print(f"La primera fruta es {frutas[0]}, y la última es {frutas[-1]}")
+frutas[1] = "fresa"
+print("La nueva lista es:",frutas)
+frutas.append("kiwi")
+print("La nueva lista es:",frutas)
+frutas.insert(1,"mandarina")
+print("La nueva lista es:",frutas)
+frutas.remove("pera")
+print("La nueva lista es:",frutas)
+frutaEliminada = frutas.pop(0)
+print(f"La nueva lista es: {frutas}, tras eliminar {frutaEliminada}")
+print(f"El elemento naranja está en la posición {frutas.index('naranja')}")
+print("La longitud de la lista es:",len(frutas))
+frutas.sort()
+print("La nueva lista es:",frutas)
+frutas.reverse()
+print("La nueva lista es:",frutas)
+if "manzana" in frutas:
+    print("Manzana está en la lista")
+else:
+    print("Manzana no está en la lista")
+frutas.copy()
+frutas.clear()
+print("La lista tras vaciarla es:",frutas)
