@@ -1,0 +1,11 @@
+use jardineria;
+update empleado set codigo_oficina = 'SEV-ES' where codigo_empleado = 32 or codigo_empleado = 33;
+update producto set precio_venta = precio_venta+(precio_venta*0.1) where gama = "Frutales";
+update empleado set codigo_oficina = 'SEV-ES', puesto = "Subdirector Ventas" where codigo_empleado = 33;
+update empleado set codigo_jefe = null where codigo_oficina = 'SEV-ES';
+delete from empleado where puesto = "Director Oficina" and codigo_oficina = 'SEV-ES';
+update empleado set puesto = "Director Oficina" where codigo_empleado = 32;
+update empleado set codigo_jefe = 32 where codigo_oficina = 'SEV-ES' and codigo_empleado != 32;
+alter table producto drop constraint producto_ibfk_1;
+alter table producto add constraint mejorada foreign key (gama) references gama_producto (gama) on delete cascade;
+delete from gama_producto where gama = "Herramientas";

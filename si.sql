@@ -1,0 +1,17 @@
+start transaction;
+insert into pedido values(200,"2001-09-11", "2001-09-11", "2001-09-11","Enviando","LLega en avión",1);
+insert into detalle_pedido values(200, "FR-50", 23, 12.50, 1);
+insert into detalle_pedido values(200, "FR-51", 10, 19.50, 1);
+update producto set cantidad_en_stock = cantidad_en_stock - 23 where codigo_producto = "FR-50";
+update producto set cantidad_en_stock = cantidad_en_stock - 10 where codigo_producto = "FR-51";
+select * from pedido;
+select * from detalle_pedido;
+select * from producto where codigo_producto = "FR_50" or codigo_producto = "FR-51";
+commit;
+select * from pedido;
+select * from detalle_pedido;
+select * from producto where codigo_producto = "FR_50" or codigo_producto = "FR-51";
+rollback;
+start transaction;
+update producto set cantidad_en_stock = cantidad_en_stock - 1000 where codigo_producto = "FR-50";
+update producto set cantidad_en_stock = cantidad_en_stock - 1000 where codigo_producto = "FR-51";

@@ -1,0 +1,31 @@
+use jardineria;
+select count(*) as "Nº empleados" from empleado;
+select count(*) as "Nº clientes" from cliente;
+select count(*) as "Total pedidos" from pedido;
+select count(*) as "Total productos" from producto;
+select max(precio_venta) as "Precio más alto" from producto;
+select min(precio_venta) as "Precio más bajo" from producto;
+select sum(cantidad) as "Monto total de ventas" from detalle_pedido;
+select avg(precio_unidad) as "Precio promedio" from detalle_pedido;
+select max(fecha_pedido) as "Fecha más reciente" from pedido;
+select min(fecha_pedido) as "Fecha más antigua" from pedido;
+select avg(limite_credito) as "Límite de crédito promedio" from cliente;
+select max(limite_credito) as "Límite de crédito más alto" from cliente;
+select min(limite_credito) as "Límite de crédito más bajo" from cliente;
+select count(*) from oficina;
+select count(*) from gama_producto;
+select max(cantidad_en_stock) from producto;
+select min(cantidad_en_stock) from producto;
+select count(*) from empleado where codigo_jefe is not null;
+select variance(precio_venta) from producto;
+select stddev(limite_credito) from cliente;
+select stddev(cantidad_en_stock) from producto;
+select sum(cantidad_en_stock) from producto where cantidad_en_stock>100;
+select avg(limite_credito) from cliente where limite_credito>5000;
+select count(*) from pedido where estado = 'Entregado';
+select min(precio_venta) from producto where cantidad_en_stock > 50;
+select count(*) from empleado where puesto = 'Representante Ventas';
+select avg(precio_venta) from producto where cantidad_en_stock > 200;
+select stddev(limite_credito) from cliente where pais="Spain";
+
+# Group by
