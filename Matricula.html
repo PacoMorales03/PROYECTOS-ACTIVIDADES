@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label>Nombre</label>
+            <input name="nombre" type="text" required>
+            <br>
+            <label>Apellidos</label>
+            <input name="Apellidos" type="text" required>
+            <br>
+            <label>Correo electŕonico</label>
+            <input name="gmail" type="email" required>
+            <br>
+            <label>Teléfono</label>
+            <input name="phone" type="tel" required>
+            <br>
+            <label>Fecha de nacimiento</label>
+            <input name="birth" type="date" required>
+            <br>
+            <label>Talla de uniforme</label>
+            <input type="radio" name="talla" required>
+            <label>XS</label>
+            <input type="radio" name="talla" required>
+            <label>S</label>
+            <input type="radio" name="talla" required>
+            <label>M</label>
+            <input type="radio" name="talla" required>
+            <label>L</label>
+            <input type="radio" name="talla" required>
+            <label>XL</label>
+        </fieldset>
+        <fieldset>
+            <legend>Datos académicos</legend>
+            <label>Grado en el que se matricula</label>
+            <select name="grado" required>
+                <option></option>
+                <optgroup label="Grado medio">
+                    <option>SMR</option>
+                </optgroup>
+                <optgroup label="Grado superior">
+                    <option>DAM</option>
+                    <option>DAW</option>
+                </optgroup>
+            </select>
+            <br>
+            <label>Titulaciones académicas</label>
+            <input name="titulaciones" type="text" required>
+            <input name="titulaciones" type="file" accept=".pdf, .png" required>
+            <br>
+            <label>Información adicional</label>
+            <br>
+            <textarea name="info" minlength="10" maxlength="300"></textarea>
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
